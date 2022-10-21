@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import game.GameInfoKey;
 import gear.Gear;
 import randomhelper.RandomHelper;
 import weapon.Weapon;
@@ -13,9 +14,9 @@ public class BattlePlayerCalculator implements PlayerCalculator {
   
   private RandomHelper helper;
 
-  private void takeDamage(BattlePlayer victim, int damage) {
-    victim.loseHealth(damage);
-    int newHealth = victim.getHealth();
+  private void takeDamage(Player victim, int damage) {
+    final int oldHealth = victim.getHealth();
+    final int newHealth = Math.max(0, oldHealth - damage);
     Map<Ability, Integer> newAbilities = new HashMap<>();
     List<Integer> newValues = helper.randDivideVal(newHealth, 4);
     newAbilities.put(Ability.CHARISMA, newValues.get(0));
@@ -25,24 +26,31 @@ public class BattlePlayerCalculator implements PlayerCalculator {
     victim.setAbbilities(newAbilities);
   }
   
-  private Map<String, Object> calcAttackHelper(BattlePlayer attacker, BattlePlayer victim) {
+  private Map<GameInfoKey, Object> calcAttackHelper(Player attacker, Player victim) {
+    Map<GameInfoKey, Object> resultMap = new HashMap<>();
+    resultMap.put(GameInfoKey.ATTACK_CAN_BOOL, false);
+    resultMap.put(GameInfoKey.ATTACK_DONE_BOOL, false);
+    resultMap.put(GameInfoKey.ATTACKER_PLAYER, attacker);
+    resultMap.put(GameInfoKey.ATTACKER_NAME_STR, attacker.getName());
+    resultMap.put(GameInfoKey.VICTIM_PLAYER, victim);
+    resultMap.put(GameInfoKey.VICTIM_NAME_STR, victim.getName());
     if (getStikePower(attacker) > getAvoidance(victim)) {
       // Can Attack
+      resultMap.put(GameInfoKey.ATTACK_CAN_BOOL, true);
       int actualDamage = getActualDamage(attacker, victim);
       if (actualDamage > 0) {
+        // Has actual attack
         takeDamage(victim, actualDamage);
+        resultMap.put(GameInfoKey.ATTACK_DONE_BOOL, true);
+        resultMap.put(GameInfoKey.ACTUAL_DAMAGE_INT, actualDamage);
       }
     }
-    return null;
+    return resultMap;
   }
   
   @Override
-  public Map<String, Object> calcAttack(Player attcker, Player victim) {
-    if (attcker instanceof BattlePlayer &&
-        victim instanceof BattlePlayer) {
-      return calcAttackHelper((BattlePlayer)attcker, (BattlePlayer)victim);
-    }
-    return null;
+  public Map<GameInfoKey, Object> calcAttack(Player attcker, Player victim) {
+    return calcAttackHelper(attcker, victim);
   }
 
   @Override
@@ -93,7 +101,6 @@ public class BattlePlayerCalculator implements PlayerCalculator {
   }
 
   @Override
-  
   public void resetPlayer(Player player, int value) {
     // Ability & Health
     Map<Ability, Integer> initAbs = new HashMap<>();

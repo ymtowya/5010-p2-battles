@@ -1,5 +1,6 @@
 package game;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -36,14 +37,16 @@ public class BattleGameImpl implements BattleGame {
   }
   
   @Override
-  public Map<GameInformKey, Object> newTurn() {
+  public Map<GameInfoKey, Object> runNewTurn() {
     Player attacker = getAttacker();
     Player victim = getVictim();
-    calculator.calcAttack(attacker, victim);
+    Map<GameInfoKey, Object> resMap = new HashMap<>();
+    Map<GameInfoKey, Object> attackMap = calculator.calcAttack(attacker, victim);
+    resMap.put(GameInfoKey.DETAIL_MAP, attackMap);
     attacker.updateAfterTurn();
     victim.updateAfterTurn();
     this.playerFlag = !this.playerFlag;
-    return null;
+    return resMap;
   }
   
   private void initPlayers(String name1, String name2) {
@@ -64,13 +67,26 @@ public class BattleGameImpl implements BattleGame {
   }
   @Override
   public String getStateString() {
-    // TODO Auto-generated method stub
-    return null;
+    return this.stateString;
   }
   @Override
   public String getResultString() {
-    // TODO Auto-generated method stub
-    return null;
+    if (!isOver()) {
+      return "Game is not over yet\n";
+    }
+    boolean p1Done = !player1.isAlive();
+    boolean p2Done = !player2.isAlive();
+    if (p1Done && p2Done) {
+      return "Game ends in a DRAW\n";
+    }
+    if (p1Done) {
+      // Winner is P2
+      return null;
+    }
+    if (p2Done) {
+      return null;
+    }
+    return "Unknown State\n";
   }
   @Override
   public void rematch() {

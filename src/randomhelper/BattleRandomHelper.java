@@ -127,13 +127,13 @@ public class BattleRandomHelper implements RandomHelper {
 
   @Override
   public List<Integer> randDivideVal(Integer total, int parts) {
-    final int unit = total / parts;
+    final int unit = Math.floorDiv(total, parts);
     final int left = total - unit * (parts - 1);
-    List<Integer> resultList = new ArrayList<>();
-    for (int i = 0; i < parts - 1; ++i) {
+    List<Integer> resultList = new ArrayList<>(parts);
+    for (int i = 0; i < parts; ++i) {
       resultList.add(unit);
     }
-    resultList.add(left);
+    resultList.set(randomInt(0, parts - 1), left);
     return resultList;
   }
 

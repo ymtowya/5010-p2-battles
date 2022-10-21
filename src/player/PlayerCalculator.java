@@ -3,11 +3,12 @@ package player;
 import java.util.List;
 import java.util.Map;
 
+import game.GameInfoKey;
 import gear.Gear;
 import weapon.Weapon;
 
 public interface PlayerCalculator {
-  Map<String, Object> calcAttack(Player attcker, Player victim);
+  Map<GameInfoKey, Object> calcAttack(Player attcker, Player victim);
   void attachWeapon(Player player);
   void attachGear(Player player);
   List<Player> playersInOrder(Player player1, Player player2);

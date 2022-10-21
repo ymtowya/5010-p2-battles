@@ -50,6 +50,14 @@ public class BattlePlayer implements Player {
     result.put(Ability.CHARISMA, this.getAbbility(Ability.CHARISMA));
     return result;
   }
+  
+  private void refreshHealth() {
+    int newHealth = 0;
+    for (Integer value : this.abilities.values()) {
+      newHealth += value;
+    }
+    this.health = newHealth;
+  }
 
   @Override
   public int getHealth() {
@@ -59,15 +67,6 @@ public class BattlePlayer implements Player {
   @Override
   public boolean isAlive() {
     return this.getHealth() > 0;
-  }
-  
-  void loseHealth(int points) {
-    this.health -= points;
-    this.health = Math.max(0, this.health);
-  }
-  
-  void gainHealth(int points) {
-    this.health += points;
   }
 
   @Override
@@ -84,13 +83,8 @@ public class BattlePlayer implements Player {
 
   @Override
   public void setAbbilities(Map<Ability, Integer> newAbilities) {
-    int newHealth = 0;
-    for (Ability ability : newAbilities.keySet()) {
-      int value = newAbilities.get(ability);
-      newHealth += value;
-      this.abilities.put(ability, value);
-    }
-    this.health = newHealth;
+    this.abilities.putAll(newAbilities);
+    this.refreshHealth();
   }
 
   @Override
