@@ -16,7 +16,9 @@ public interface Gear {
   GearDirect getGearDirect();
   int getGearDirectIndex();
   boolean isSameType(Gear gear);
-  void setAffects(RandomHelper helper);
+  void setAffects(Map<Ability, Integer> affects);
+  void setRandAffects(RandomHelper helper);
   Integer getAffect(Ability ability);
   boolean canAddInto(List<Gear> gears);
+  void setGearDirect(GearDirect newGear);
 }

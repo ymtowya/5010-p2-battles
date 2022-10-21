@@ -78,8 +78,23 @@ public abstract class AbstractBattleGear implements Gear {
   @Override
   abstract public GearType getGearType();
   
+  private Integer getValueOr0(Map<Ability, Integer> newAffects, Ability ability) {
+    if (newAffects.containsKey(ability)) {
+      return newAffects.get(ability);
+    }
+    return 0;
+  }
+  
   @Override
-  abstract public void setAffects(RandomHelper helper);
+  public void setAffects(Map<Ability, Integer> affects) {
+    this.affects.put(Ability.STRENGTH, getValueOr0(affects, Ability.STRENGTH));
+    this.affects.put(Ability.CONSTITUITION, getValueOr0(affects, Ability.CONSTITUITION));
+    this.affects.put(Ability.DEXTERITY, getValueOr0(affects, Ability.DEXTERITY));
+    this.affects.put(Ability.CHARISMA, getValueOr0(affects, Ability.CHARISMA));
+  }
+  
+  @Override
+  public abstract void setRandAffects(RandomHelper helper);
   
   @Override
   public GearDirect getGearDirect() {
@@ -94,5 +109,10 @@ public abstract class AbstractBattleGear implements Gear {
   @Override
   public GearSize getGearSize() {
     return this.gearSize;
+  }
+  
+  @Override
+  public void setGearDirect(GearDirect newGear) {
+    this.gearDirect = newGear;
   }
 }

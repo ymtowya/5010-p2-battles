@@ -1,5 +1,9 @@
 package gear;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import player.Ability;
 import randomhelper.RandomHelper;
 
 public class Potion extends AbstractBattleGear {
@@ -14,9 +18,12 @@ public class Potion extends AbstractBattleGear {
   }
 
   @Override
-  public void setAffects(RandomHelper helper) {
-    // TODO Auto-generated method stub
-
+  public void setRandAffects(RandomHelper helper) {
+    Ability affectedAbility = helper.randAbility();
+    int points = helper.randAffectValue();
+    Map<Ability, Integer> res = new HashMap<>();
+    res.put(affectedAbility, points);
+    this.setAffects(res);
   }
 
 }

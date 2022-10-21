@@ -1,17 +1,18 @@
 package weapon;
 
+import player.Player;
+import randomhelper.RandomHelper;
+
 public class Katana implements Weapon {
 
   @Override
-  public int getDamage() {
-    // TODO Auto-generated method stub
-    return 0;
+  public int getDamageBy(Player player, RandomHelper helper) {
+    return helper.randomInt(4, 6);
   }
 
   @Override
-  public int getCapacity() {
-    // TODO Auto-generated method stub
-    return 0;
+  public int getMaxAttackTimes() {
+    return 2;
   }
 
 }

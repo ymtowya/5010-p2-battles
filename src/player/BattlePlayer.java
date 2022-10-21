@@ -5,12 +5,14 @@ import java.util.List;
 import java.util.Map;
 
 import gear.Gear;
+import weapon.Weapon;
 
 public class BattlePlayer implements Player {
 
   private Map<Ability, Integer> abilities;
   private int health;
   private List<Gear> myGears;
+  private Weapon myWeapon;
   
   @Override
   public Integer getAbbility(Ability ability) {
@@ -60,7 +62,29 @@ public class BattlePlayer implements Player {
     for (Gear gear : this.myGears) {
       gear.used();
     }
-    
+  }
+
+  @Override
+  public Weapon getWeapon() {
+    return myWeapon;
+  }
+
+  @Override
+  public void setAbbilities(Map<Ability, Integer> newAbilities) {
+    for (Ability ability : newAbilities.keySet()) {
+      this.abilities.put(ability, newAbilities.get(ability));
+    }
+  }
+
+  @Override
+  public void setGears(List<Gear> newGears) {
+    myGears.clear();
+    myGears.addAll(newGears);
+  }
+
+  @Override
+  public void setWeapon(Weapon newWeapon) {
+    myWeapon = newWeapon;
   }
   
 }

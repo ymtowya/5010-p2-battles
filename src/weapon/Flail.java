@@ -1,17 +1,28 @@
 package weapon;
 
+import player.Ability;
+import player.Player;
+import randomhelper.RandomHelper;
+
 public class Flail implements Weapon {
 
+  private boolean canWieldBy(Player player) {
+    return player.getAbbility(Ability.DEXTERITY) > 14;
+  }
+  
   @Override
-  public int getDamage() {
-    // TODO Auto-generated method stub
-    return 0;
+  public int getDamageBy(Player player, RandomHelper helper) {
+    int damage = helper.randomInt(8, 12);
+    if (!canWieldBy(player)) {
+      damage /= 2;
+    }
+    return damage;
   }
 
   @Override
-  public int getCapacity() {
-    // TODO Auto-generated method stub
-    return 0;
+  public int getMaxAttackTimes() {
+    return 1;
   }
+
 
 }

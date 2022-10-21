@@ -4,14 +4,15 @@ import java.util.List;
 import java.util.Map;
 
 import gear.Gear;
+import randomhelper.RandomHelper;
 import weapon.Weapon;
 
 public class BattlePlayerCalculator implements PlayerCalculator {
   
-  
+  private RandomHelper helper;
   
   private Map<String, Object> calcAttackHelper(BattlePlayer attacker, BattlePlayer victim) {
-    
+    // TODO
     return null;
   }
   
@@ -25,14 +26,14 @@ public class BattlePlayerCalculator implements PlayerCalculator {
   }
 
   @Override
-  public Map<String, Object> attachWeapon(Player player, List<Weapon> weapons) {
-    // TODO Auto-generated method stub
+  public Map<String, Object> attachWeapon(Player player) {
+    player.setWeapon(helper.randWeaponChoice());
     return null;
   }
 
   @Override
-  public Map<String, Object> attachGear(Player player, List<Gear> gears) {
-    // TODO Auto-generated method stub
+  public Map<String, Object> attachGear(Player player) {
+    player.setGears(helper.randGearChoices());
     return null;
   }
 }

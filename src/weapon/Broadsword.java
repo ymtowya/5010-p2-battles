@@ -1,17 +1,19 @@
 package weapon;
 
+import player.Player;
+import randomhelper.RandomHelper;
+
 public class Broadsword implements Weapon {
 
   @Override
-  public int getDamage() {
-    // TODO Auto-generated method stub
-    return 0;
+  public int getDamageBy(Player player, RandomHelper helper) {
+    return helper.randomInt(6, 10);
   }
 
   @Override
-  public int getCapacity() {
-    // TODO Auto-generated method stub
-    return 0;
+  public int getMaxAttackTimes() {
+    return 1;
   }
+
 
 }
