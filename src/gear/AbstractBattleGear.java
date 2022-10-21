@@ -112,7 +112,7 @@ public abstract class AbstractBattleGear implements Gear {
   }
   
   @Override
-  public void setGearDirect(GearDirect newGear) {
-    this.gearDirect = newGear;
+  public void setGearDirect(GearDirect newGearDirect) {
+    this.gearDirect = newGearDirect;
   }
 }

@@ -1,5 +1,6 @@
 package player;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,9 +11,21 @@ import weapon.Weapon;
 public class BattlePlayer implements Player {
 
   private Map<Ability, Integer> abilities;
-  private int health;
   private List<Gear> myGears;
+  private int health;
   private Weapon myWeapon;
+  private String name;
+  
+  public BattlePlayer(String newName) {
+    this.name = newName;
+    this.abilities = new HashMap<>();
+    this.myGears = new ArrayList<>();
+  }
+  
+  @Override
+  public String getName() {
+    return this.name;
+  }
   
   @Override
   public Integer getAbbility(Ability ability) {
@@ -45,7 +58,7 @@ public class BattlePlayer implements Player {
   
   @Override
   public boolean isAlive() {
-    return this.health > 0;
+    return this.getHealth() > 0;
   }
   
   void loseHealth(int points) {
@@ -71,9 +84,13 @@ public class BattlePlayer implements Player {
 
   @Override
   public void setAbbilities(Map<Ability, Integer> newAbilities) {
+    int newHealth = 0;
     for (Ability ability : newAbilities.keySet()) {
-      this.abilities.put(ability, newAbilities.get(ability));
+      int value = newAbilities.get(ability);
+      newHealth += value;
+      this.abilities.put(ability, value);
     }
+    this.health = newHealth;
   }
 
   @Override
@@ -86,5 +103,5 @@ public class BattlePlayer implements Player {
   public void setWeapon(Weapon newWeapon) {
     myWeapon = newWeapon;
   }
-  
+
 }

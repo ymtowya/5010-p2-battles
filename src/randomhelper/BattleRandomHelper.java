@@ -62,7 +62,19 @@ public class BattleRandomHelper implements RandomHelper {
   }
   
   private int randTerm() {
-    return this.randomInt(5, 20);
+    return this.randomInt(5, 50);
+  }
+  
+  private List<Gear> randGearDirectHelper(List<Gear> options) {
+    Collections.shuffle(options);
+    for (Gear gear : options) {
+      if (this.randomInt(1, 100) > 25) {
+        gear.setGearDirect(GearDirect.POSITIVE);
+      } else {
+        gear.setGearDirect(GearDirect.NEGATIVE);
+      }
+    }
+    return options;
   }
 
   @Override
@@ -99,7 +111,7 @@ public class BattleRandomHelper implements RandomHelper {
     }
     resultGears.addAll(randGearsHelper(tmpGears, randomInt(0, leftSpace)));
     // Assign Direct
-    return resultGears;
+    return this.randGearDirectHelper(resultGears);
   }
 
   @Override
@@ -132,17 +144,17 @@ public class BattleRandomHelper implements RandomHelper {
 
   @Override
   public Ability randAbility() {
-    return ABILITIES[this.randomInt(0, 3)];
+    return ABILITIES[this.randomInt(0, ABILITIES.length - 1)];
   }
 
   @Override
   public GearSize randGearSize() {
-    return GEARSIZES[this.randomInt(0, 2)];
+    return GEARSIZES[this.randomInt(0, GEARSIZES.length - 1)];
   }
 
   @Override
   public GearDirect randGearDirect() {
-    return GEARDIRECTS[this.randomInt(0, 1)];
+    return GEARDIRECTS[this.randomInt(0, GEARDIRECTS.length - 1)];
   }
 
 }

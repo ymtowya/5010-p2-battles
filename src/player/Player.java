@@ -13,6 +13,7 @@ public interface Player {
   boolean isAlive();
   void updateAfterTurn();
   Weapon getWeapon();
+  String getName();
   void setAbbilities(Map<Ability, Integer> abilities);
   void setGears(List<Gear> newGears);
   void setWeapon(Weapon newWeapon);

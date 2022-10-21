@@ -5,5 +5,9 @@ import java.util.Map;
 import player.Player;
 
 public interface BattleGame {
-  Map<GameInformKey, Object> doAttack(Player attacker, Player victim);
+  Map<GameInformKey, Object> newTurn();
+  boolean isOver();
+  String getStateString();
+  String getResultString();
+  void rematch();
 }
