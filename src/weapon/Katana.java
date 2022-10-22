@@ -3,6 +3,11 @@ package weapon;
 import player.Player;
 import randomhelper.RandomHelper;
 
+/**
+ * Katana represents the Katana weapon in the game.
+ *
+ *
+ */
 public class Katana implements Weapon {
 
   @Override

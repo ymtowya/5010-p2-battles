@@ -4,6 +4,11 @@ import player.Ability;
 import player.Player;
 import randomhelper.RandomHelper;
 
+/**
+ * TwoHandSword represents the two hand sword weapon in the game.
+ *
+ *
+ */
 public class TwoHandSword implements Weapon {
 
   private boolean canWieldBy(Player player) {

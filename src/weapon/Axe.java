@@ -3,6 +3,11 @@ package weapon;
 import player.Player;
 import randomhelper.RandomHelper;
 
+/**
+ * Axe represents the Axe weapon in the game.
+ *
+ *
+ */
 public class Axe implements Weapon {
 
   @Override

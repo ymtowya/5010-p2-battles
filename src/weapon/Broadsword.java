@@ -3,6 +3,11 @@ package weapon;
 import player.Player;
 import randomhelper.RandomHelper;
 
+/**
+ * Broadsword represents the Broadsword weapon in the game.
+ *
+ *
+ */
 public class Broadsword implements Weapon {
 
   @Override

@@ -8,10 +8,20 @@ import java.util.Map;
 import game.GameInfoKey;
 import randomhelper.RandomHelper;
 
+/**
+ * Calculator to calculate the player's processes.
+ *
+ *
+ */
 public class BattlePlayerCalculator implements PlayerCalculator {
   
   private RandomHelper helper;
   
+  /**
+   * Init the calculator with the random helper.
+   *
+   * @param newHelper the random helper
+   */
   public BattlePlayerCalculator(RandomHelper newHelper) {
     this.helper = newHelper;
   }

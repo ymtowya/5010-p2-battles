@@ -4,6 +4,11 @@ import player.Ability;
 import player.Player;
 import randomhelper.RandomHelper;
 
+/**
+ * Flail represents the Flail weapon in the game.
+ *
+ *
+ */
 public class Flail implements Weapon {
 
   private boolean canWieldBy(Player player) {

@@ -6,8 +6,18 @@ import java.util.Map;
 import player.Ability;
 import randomhelper.RandomHelper;
 
+/**
+ * Potion is a type of Battle Gear.
+ *
+ *
+ */
 public class Potion extends AbstractBattleGear {
 
+  /**
+   * Init the Potion with term limit.
+   *
+   * @param termLimit term length
+   */
   public Potion(int termLimit) {
     super(GearSize.NA, termLimit);
   }

@@ -1,11 +1,22 @@
 package gear;
 
+/**
+ * Type of Gear.
+ *
+ *
+ */
 public enum GearType {
   HEADGEAR,
   POTION,
   BELT,
   FOOTWEAR;
   
+  /**
+   * Get the capacity by type. 
+   *
+   * @param gearType gear type
+   * @return capacity
+   */
   public static int getCapacityByType(GearType gearType) {
     int units = 1;
     switch (gearType) {

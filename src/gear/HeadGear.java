@@ -6,8 +6,17 @@ import java.util.Map;
 import player.Ability;
 import randomhelper.RandomHelper;
 
+/**
+ * Head Gear as a type of Battle Gear.
+ *
+ */
 public class HeadGear extends AbstractBattleGear {
   
+  /**
+   * Init the Headgear with term limit.
+   *
+   * @param termLimit term length
+   */
   public HeadGear(int termLimit) {
     super(GearSize.NA, termLimit);
   }

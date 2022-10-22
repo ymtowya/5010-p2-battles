@@ -1,11 +1,22 @@
 package gear;
 
+/**
+ * Size of Gear.
+ *
+ *
+ */
 public enum GearSize {
   SMALL,
   MEDIUM,
   LARGE,
   NA;
   
+  /**
+   * Return the unit of the size.
+   *
+   * @param gearSize the direct
+   * @return the unit
+   */
   public static int getUnitBySize(GearSize gearSize) {
     int res = 1;
     switch (gearSize) {

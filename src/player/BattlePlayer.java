@@ -1,16 +1,21 @@
 package player;
 
+import gear.Gear;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import gear.Gear;
 import weapon.Weapon;
 
+/**
+ * BattlePlayer is the player in the game, implementing Player.
+ *
+ */
 public class BattlePlayer implements Player {
 
+  private static int serialId = 1;
+  
   private Map<Ability, Integer> abilities;
   private List<Gear> myGears;
   private int health;
@@ -18,8 +23,11 @@ public class BattlePlayer implements Player {
   private String name;
   private int id;
   
-  private static int serialId = 1;
-  
+  /**
+   * Init the player with the name.
+   *
+   * @param newName player's name
+   */
   public BattlePlayer(String newName) {
     this.name = newName;
     this.id = serialId++;

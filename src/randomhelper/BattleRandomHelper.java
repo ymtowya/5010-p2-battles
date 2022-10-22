@@ -19,6 +19,11 @@ import weapon.Katana;
 import weapon.TwoHandSword;
 import weapon.Weapon;
 
+/**
+ * BattleRandomHelper is one helper to give random values to support the game.
+ *
+ *
+ */
 public class BattleRandomHelper implements RandomHelper {
   
   private static final Ability[] ABILITIES = {Ability.STRENGTH,
