@@ -1,11 +1,10 @@
 package player;
 
+import game.GameInfoKey;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import game.GameInfoKey;
 import randomhelper.RandomHelper;
 
 /**
@@ -92,8 +91,8 @@ public class BattlePlayerCalculator implements PlayerCalculator {
   }
 
   protected Integer getPotentialDamage(Player player) {
-    return player.getAbbility(Ability.STRENGTH) +
-        helper.randomInt(0, player.getWeapon().getDamageBy(player, helper));
+    return player.getAbbility(Ability.STRENGTH)
+        + helper.randomInt(0, player.getWeapon().getDamageBy(player, helper));
   }
 
   protected Integer getActualDamage(Player attaker, Player victim) {

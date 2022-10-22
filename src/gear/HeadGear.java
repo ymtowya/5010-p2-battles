@@ -2,7 +2,6 @@ package gear;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import player.Ability;
 import randomhelper.RandomHelper;
 

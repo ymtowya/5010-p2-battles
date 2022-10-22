@@ -60,7 +60,7 @@ public class BattleGameDriver {
     log("\n-------------------\n");
     System.out.println("Now input 're' to RE-match them:");
     String str = in.next();
-    if (str.equals("re")) {
+    if ("re".equals(str)) {
       log("Now for REMATCH\n");
       game.rematch();
       log("The game state now is:\n");
@@ -77,6 +77,11 @@ public class BattleGameDriver {
     log("\n---------END----------\n");
   }
 
+  /**
+   * Main Function of Driver.
+   *
+   * @param args arguments
+   */
   public static void main(String[] args) {
     try {
       // setUp4()

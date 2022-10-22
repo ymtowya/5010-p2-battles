@@ -51,18 +51,18 @@ public class BattleGameImpl implements BattleGame {
   private String getAttckResString(Map<GameInfoKey, Object> attackMap) {
     StringBuilder sb = new StringBuilder();
     sb.append("-----Attack-----\n")
-      .append("{%s} --attacks-> {%s}\n")
-      .append("Result: %s\n")
-      .append("Attack Times: %d\n")
-      .append("Caused Damage: %d\n")
-      .append("----------------\n");
+        .append("{%s} --attacks-> {%s}\n")
+        .append("Result: %s\n")
+        .append("Attack Times: %d\n")
+        .append("Caused Damage: %d\n")
+        .append("----------------\n");
     final String attName = (String) attackMap.get(GameInfoKey.ATTACKER_NAME_STR);
     final String vicName = (String) attackMap.get(GameInfoKey.VICTIM_NAME_STR);
     final boolean attempt = (boolean) attackMap.get(GameInfoKey.ATTACK_DONE_BOOL);
     final String resState = attempt ? "Success" : "Fail";
     final int attkTimes = (int) attackMap.get(GameInfoKey.ATTACK_TIMES_INT);
-    final int damage = attempt ?
-        (int) attackMap.get(GameInfoKey.ACTUAL_DAMAGE_INT) : 0;
+    final int damage = attempt
+        ? (int) attackMap.get(GameInfoKey.ACTUAL_DAMAGE_INT) : 0;
     
     return String.format(sb.toString(), 
         attName, vicName, resState, attkTimes, damage);
