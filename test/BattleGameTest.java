@@ -223,14 +223,24 @@ public class BattleGameTest {
     assertTrue(details.contains("Gear: Footwear"));
   }
 
+  @SuppressWarnings("unchecked")
   @Test
   public void testTurn() {
-    calculator.changeHelper(helper2);
+    calculator.changeHelper(helper1);
     game = new BattleGameImpl("Charlie", "Fionna", calculator);
-    Map<GameInfoKey, Object> resMap = game.runNewTurn();
+    Map<GameInfoKey, Object> resMap = (Map<GameInfoKey, Object>) game.runNewTurn()
+        .get(GameInfoKey.DETAIL_MAP);
     System.out.println(resMap);
-    //    String p1 = (String) resMap.get(GameInfoKey.ATTACKER_NAME_STR);
-    //    String p2 = (String) resMap.get(GameInfoKey.VICTIM_NAME_STR);
+    String p1 = (String) resMap.get(GameInfoKey.ATTACKER_NAME_STR);
+    String p2 = (String) resMap.get(GameInfoKey.VICTIM_NAME_STR);
+    assertTrue(p1.contains("Charlie"));
+    assertTrue(p2.contains("Fionna"));
+    Map<GameInfoKey, Object> resMap2 = (Map<GameInfoKey, Object>) game.runNewTurn()
+        .get(GameInfoKey.DETAIL_MAP);
+    String newp1 = (String) resMap2.get(GameInfoKey.ATTACKER_NAME_STR);
+    String newp2 = (String) resMap2.get(GameInfoKey.VICTIM_NAME_STR);
+    assertEquals(p1, newp2);
+    assertEquals(p2, newp1);
   }
 
 }
