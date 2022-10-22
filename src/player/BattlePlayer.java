@@ -111,6 +111,11 @@ public class BattlePlayer implements Player {
   @Override
   public void setAbbilities(Map<Ability, Integer> newAbilities) {
     this.abilities.putAll(newAbilities);
+    for (Ability ability : this.abilities.keySet()) {
+      if (this.abilities.get(ability) < 0) {
+        this.abilities.put(ability, 0);
+      }
+    }
     this.refreshHealth();
   }
 

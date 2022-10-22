@@ -3,12 +3,20 @@ package player;
 import game.GameInfoKey;
 import java.util.List;
 import java.util.Map;
+import randomhelper.RandomHelper;
 
 /**
  * PlayerCalculator is the interface to calculate player's state and action.
  *
  */
 public interface PlayerCalculator {
+  
+  /**
+   * Change to new random helper.
+   *
+   * @param newHelper new helper
+   */
+  void changeHelper(RandomHelper newHelper);
   
   /**
    * Calculate the effect of an attack in the game.
@@ -56,4 +64,37 @@ public interface PlayerCalculator {
    * @param value basic ability value
    */
   void resetPlayer(Player player, int value);
+  
+  /**
+   * Calculate the striking power.
+   *
+   * @param player who strikes
+   * @return striking power
+   */
+  Integer getStikePower(Player player);
+  
+  /**
+   * Calculate Avoidance value.
+   *
+   * @param player who avoids
+   * @return avoidance value
+   */
+  Integer getAvoidance(Player player);
+  
+  /**
+   * Calculate potential damage.
+   *
+   * @param player who attacks
+   * @return potential damage
+   */
+  Integer getPotentialDamage(Player player);
+  
+  /**
+   * Calculate actual damage.
+   *
+   * @param attaker the attacker
+   * @param victim the victim player
+   * @return the actual damage value
+   */
+  Integer getActualDamage(Player attaker, Player victim);
 }

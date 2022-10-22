@@ -41,9 +41,9 @@ public class BattlePlayerCalculator implements PlayerCalculator {
     Map<GameInfoKey, Object> resultMap = new HashMap<>();
     resultMap.put(GameInfoKey.ATTACK_CAN_BOOL, false);
     resultMap.put(GameInfoKey.ATTACK_DONE_BOOL, false);
-    resultMap.put(GameInfoKey.ATTACKER_PLAYER, attacker);
+    // resultMap.put(GameInfoKey.ATTACKER_PLAYER, attacker);
     resultMap.put(GameInfoKey.ATTACKER_NAME_STR, attacker.getName());
-    resultMap.put(GameInfoKey.VICTIM_PLAYER, victim);
+    // resultMap.put(GameInfoKey.VICTIM_PLAYER, victim);
     resultMap.put(GameInfoKey.VICTIM_NAME_STR, victim.getName());
     int attackTimes = 0;
     int actualDamage = 0;
@@ -82,20 +82,24 @@ public class BattlePlayerCalculator implements PlayerCalculator {
     player.setGears(helper.randGearChoices());
   }
 
-  protected Integer getStikePower(Player player) {
+  @Override
+  public Integer getStikePower(Player player) {
     return player.getAbbility(Ability.STRENGTH) + helper.randomInt(1, 10);
   }
 
-  protected Integer getAvoidance(Player player) {
+  @Override
+  public Integer getAvoidance(Player player) {
     return player.getAbbility(Ability.DEXTERITY) + helper.randomInt(1, 6);
   }
 
-  protected Integer getPotentialDamage(Player player) {
+  @Override
+  public Integer getPotentialDamage(Player player) {
     return player.getAbbility(Ability.STRENGTH)
         + helper.randomInt(0, player.getWeapon().getDamageBy(player, helper));
   }
 
-  protected Integer getActualDamage(Player attaker, Player victim) {
+  @Override
+  public Integer getActualDamage(Player attaker, Player victim) {
     return this.getPotentialDamage(attaker) - victim.getAbbility(Ability.CONSTITUITION);
   }
 
@@ -132,5 +136,10 @@ public class BattlePlayerCalculator implements PlayerCalculator {
     player.setGears(helper.randGearChoices());
     // Weapon
     player.setWeapon(helper.randWeaponChoice());
+  }
+
+  @Override
+  public void changeHelper(RandomHelper newHelper) {
+    this.helper = newHelper;
   }
 }
