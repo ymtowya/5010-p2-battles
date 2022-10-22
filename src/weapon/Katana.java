@@ -15,4 +15,8 @@ public class Katana implements Weapon {
     return 2;
   }
 
+  @Override
+  public String toString() {
+    return "Weapon: Katanas";
+  }
 }

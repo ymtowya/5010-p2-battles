@@ -24,5 +24,8 @@ public class Flail implements Weapon {
     return 1;
   }
 
-
+  @Override
+  public String toString() {
+    return "Weapon: Flail";
+  }
 }

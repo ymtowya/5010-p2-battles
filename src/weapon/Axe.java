@@ -14,5 +14,10 @@ public class Axe implements Weapon {
   public int getMaxAttackTimes() {
     return 1;
   }
+  
+  @Override
+  public String toString() {
+    return "Weapon: Axe";
+  }
 
 }

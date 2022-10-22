@@ -2,10 +2,7 @@ package player;
 
 import java.util.List;
 import java.util.Map;
-
 import game.GameInfoKey;
-import gear.Gear;
-import weapon.Weapon;
 
 public interface PlayerCalculator {
   Map<GameInfoKey, Object> calcAttack(Player attcker, Player victim);

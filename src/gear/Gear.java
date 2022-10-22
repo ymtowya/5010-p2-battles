@@ -6,7 +6,25 @@ import java.util.Map;
 import player.Ability;
 import randomhelper.RandomHelper;
 
-public interface Gear {
+/**
+ * Interface representing Gear.
+ *
+ *
+ */
+public interface Gear extends Comparable<Gear>{
+  
+  /**
+   * Get Gear id.
+   *
+   * @return id
+   */
+  int getId();
+  
+  /**
+   * Get how much terms left.
+   *
+   * @return
+   */
   int getTermLeft();
   boolean validForUse();
   void used();

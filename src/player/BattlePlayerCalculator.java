@@ -6,13 +6,15 @@ import java.util.List;
 import java.util.Map;
 
 import game.GameInfoKey;
-import gear.Gear;
 import randomhelper.RandomHelper;
-import weapon.Weapon;
 
 public class BattlePlayerCalculator implements PlayerCalculator {
   
   private RandomHelper helper;
+  
+  public BattlePlayerCalculator(RandomHelper newHelper) {
+    this.helper = newHelper;
+  }
 
   private void takeDamage(Player victim, int damage) {
     final int oldHealth = victim.getHealth();
@@ -34,17 +36,25 @@ public class BattlePlayerCalculator implements PlayerCalculator {
     resultMap.put(GameInfoKey.ATTACKER_NAME_STR, attacker.getName());
     resultMap.put(GameInfoKey.VICTIM_PLAYER, victim);
     resultMap.put(GameInfoKey.VICTIM_NAME_STR, victim.getName());
-    if (getStikePower(attacker) > getAvoidance(victim)) {
-      // Can Attack
-      resultMap.put(GameInfoKey.ATTACK_CAN_BOOL, true);
-      int actualDamage = getActualDamage(attacker, victim);
-      if (actualDamage > 0) {
-        // Has actual attack
-        takeDamage(victim, actualDamage);
-        resultMap.put(GameInfoKey.ATTACK_DONE_BOOL, true);
-        resultMap.put(GameInfoKey.ACTUAL_DAMAGE_INT, actualDamage);
+    int attackTimes = 0;
+    int actualDamage = 0;
+    final int maxTimes = attacker.getWeapon().getMaxAttackTimes();
+    for (int i = 0; i < maxTimes; ++i) {
+      if (getStikePower(attacker) > getAvoidance(victim)) {
+        // Can Attack
+        resultMap.put(GameInfoKey.ATTACK_CAN_BOOL, true);
+        final int tempDamage = getActualDamage(attacker, victim);
+        if (tempDamage > 0) {
+          // Has actual attack
+          takeDamage(victim, tempDamage);
+          resultMap.put(GameInfoKey.ATTACK_DONE_BOOL, true);
+          actualDamage += tempDamage;
+          ++attackTimes;
+        }
       }
     }
+    resultMap.put(GameInfoKey.ACTUAL_DAMAGE_INT, actualDamage);
+    resultMap.put(GameInfoKey.ATTACK_TIMES_INT, attackTimes);
     return resultMap;
   }
   

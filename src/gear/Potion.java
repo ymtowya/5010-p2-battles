@@ -25,5 +25,41 @@ public class Potion extends AbstractBattleGear {
     res.put(affectedAbility, points);
     this.setAffects(res);
   }
+  
+  @Override
+  public String toString() {
+    return String.format("%s\n%s%s\n",
+        "----Gear: Potion----",
+        getAffectString(),
+        "--------------------");
+  }
+  
+  @Override
+  protected int compareToBelt(Belt belt) {
+    return -1;
+  }
+  
+  @Override
+  protected int compareToFootwear(Footwear footwear) {
+    return -1;
+  }
+  
+  @Override
+  protected int compareToHeadGear(HeadGear headGear) {
+    return 1;
+  }
+  
+  @Override
+  protected int compareToPotion(Potion potion) {
+    return this.getId() - potion.getId();
+  }
+
+  @Override
+  public int compareTo(Gear o) {
+    if (o instanceof AbstractBattleGear) {
+      return -1 * ((AbstractBattleGear) o).compareToPotion(this);
+    }
+    return 0;
+  }
 
 }

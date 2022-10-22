@@ -24,5 +24,41 @@ public class HeadGear extends AbstractBattleGear {
     res.put(Ability.CONSTITUITION, points);
     this.setAffects(res);
   }
+  
+  @Override
+  public String toString() {
+    return String.format("%s\n%s%s\n",
+        "----Gear: HeadGear----",
+        getAffectString(),
+        "--------------------");
+  }
+  
+  @Override
+  protected int compareToBelt(Belt belt) {
+    return -1;
+  }
+  
+  @Override
+  protected int compareToFootwear(Footwear footwear) {
+    return -1;
+  }
+  
+  @Override
+  protected int compareToHeadGear(HeadGear headGear) {
+    return this.getId() - headGear.getId();
+  }
+  
+  @Override
+  protected int compareToPotion(Potion potion) {
+    return -1;
+  }
+
+  @Override
+  public int compareTo(Gear o) {
+    if (o instanceof AbstractBattleGear) {
+      return -1 * ((AbstractBattleGear) o).compareToHeadGear(this);
+    }
+    return 0;
+  }
 
 }

@@ -1,6 +1,7 @@
 package player;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,16 +16,34 @@ public class BattlePlayer implements Player {
   private int health;
   private Weapon myWeapon;
   private String name;
+  private int id;
+  
+  private static int serialId = 1;
   
   public BattlePlayer(String newName) {
     this.name = newName;
+    this.id = serialId++;
     this.abilities = new HashMap<>();
     this.myGears = new ArrayList<>();
   }
   
+  protected int getId() {
+    return this.id;
+  }
+  
   @Override
   public String getName() {
-    return this.name;
+    return String.format("Player #%d-%s", this.id, this.name);
+  }
+  
+  private String getAbilitiesString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Ability - Value\n");
+    for (Ability ability : abilities.keySet()) {
+      sb.append(String.format("%s - %d\n",
+          ability.name(), getAbbility(ability)));
+    }
+    return sb.toString();
   }
   
   @Override
@@ -91,11 +110,29 @@ public class BattlePlayer implements Player {
   public void setGears(List<Gear> newGears) {
     myGears.clear();
     myGears.addAll(newGears);
+    Collections.sort(myGears);
   }
 
   @Override
   public void setWeapon(Weapon newWeapon) {
     myWeapon = newWeapon;
+  }
+  
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("\n***Detailed Player's Description***\n");
+    sb.append(getName());
+    sb.append("\n***Player Abilities With Gears Affects***\n");
+    sb.append(getAbilitiesString());
+    sb.append("\n***Player is Wearing These Gears***\n");
+    for (Gear gear : myGears) {
+      sb.append(gear.toString());
+    }
+    sb.append("\n***Player is Using This Weapon***\n");
+    sb.append(getWeapon().toString());
+    sb.append("\n***End Of Description***\n");
+    return sb.toString();
   }
 
 }

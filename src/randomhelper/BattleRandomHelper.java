@@ -76,9 +76,8 @@ public class BattleRandomHelper implements RandomHelper {
     }
     return options;
   }
-
-  @Override
-  public List<Gear> randGearChoices() {
+  
+  private List<Gear> getNaiiveGearList() {
     List<Gear> resultGears = new ArrayList<>();
     List<Gear> tmpGears = new ArrayList<>();
     // HeadGear
@@ -115,6 +114,15 @@ public class BattleRandomHelper implements RandomHelper {
   }
 
   @Override
+  public List<Gear> randGearChoices() {
+    List<Gear> resGears = getNaiiveGearList();
+    for (Gear gear : resGears) {
+      gear.setRandAffects(this);
+    }
+    return resGears;
+  }
+
+  @Override
   public Weapon randWeaponChoice() {
     List<Weapon> resList = new ArrayList<>();
     resList.add(new Axe());
@@ -139,7 +147,7 @@ public class BattleRandomHelper implements RandomHelper {
 
   @Override
   public int randAffectValue() {
-    return this.randomInt(0, 15);
+    return this.randomInt(2, 12);
   }
 
   @Override

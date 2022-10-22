@@ -15,5 +15,8 @@ public class Broadsword implements Weapon {
     return 1;
   }
 
-
+  @Override
+  public String toString() {
+    return "Weapon: Broadsword";
+  }
 }
