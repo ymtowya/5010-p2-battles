@@ -1,4 +1,4 @@
-## Primates
+## Battles
 
 ### Overview
 
@@ -6,7 +6,7 @@ This is a model of a battle game, it needs to represent different kinds of playe
 
 ### Features
 * Calculator. 
-    There is a Calculator interface that does all the 'dirty' work of calculating, and setting the Players free from tedious processes.
+    There is a `PlayerCalculator` interface that does all the 'dirty' work of calculating, and setting the Players free from tedious processes.
 * Organized Information
     All information are stored in `Map<GameInfoKey, Object>` instead of String, easy to edit and reformat.
 * Clear Structure
@@ -48,15 +48,12 @@ You can change the parameters in the `setUp3()` function.
 One BIG change I made was I added a whole new Interface : PlayerCalculator. It will take all the dirty work, like calculating or assigning the values from RandomHelper. The benefit of this is that in case we want a new algorithm or method of finding the damages, just implement a new calculator and let the game model switch to this one. Then it's all set! I did this in the Unit Tests. <br>
 By doing so, our Player implementations are seperated from the calculation work, only maintaining the model datas.
 
-
-re-designed my model this morning and replaced the `List<Isolation>` and `List<Enclosure>` with two `List<AbstractMonkeyHousing>` and basically re-implement all my functions in these housing classes. The great fact about this change is that it enforces me to put all functions into the abstract class, making my degin really readable and organized! No duplicate!
-
 ### Assumptions
 
 * Gear Term Upper Bound is 50. But you can simply change this by implementing other RandomHelper and replace it to initialize the Calculator.
 * Users of this class will need a returned Map rather than a large String because they might need to reformat the information.
 * Attack damage and health and all attributes are in Integer format.
-* We need a list of Gear that has all types of the Gear (regardless of the Size).
+* We generate a list of Gear that has all types of the Gear (regardless of the Size).
 
 ### Limitations
 
