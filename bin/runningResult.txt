@@ -15,39 +15,15 @@ Player :
 Player #2-Dianna
 ***Player Abilities With Gears Affects***
 Ability - Value
-CHARISMA - 78
-DEXTERITY - -6
-CONSTITUITION - 48
-STRENGTH - 57
+CHARISMA - 45
+DEXTERITY - 31
+CONSTITUITION - 57
+STRENGTH - 64
 
 ***Player is Wearing These Gears***
 ----Gear: HeadGear----
 Effected Ability - Effect Value - P/N
-CONSTITUITION - 10 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-STRENGTH - 3 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CHARISMA - 2 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CHARISMA - 12 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CHARISMA - 2 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CONSTITUITION - 10 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-STRENGTH - 12 - P
+CONSTITUITION - 6 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
@@ -55,55 +31,79 @@ CONSTITUITION - 7 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-STRENGTH - 5 - N
+STRENGTH - 11 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-STRENGTH - 7 - P
+CHARISMA - 8 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-CHARISMA - 11 - P
+CONSTITUITION - 10 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-DEXTERITY - 8 - N
+STRENGTH - 6 - N
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-CHARISMA - 7 - P
+STRENGTH - 3 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-CHARISMA - 10 - P
+CONSTITUITION - 4 - N
 --------------------
-----Gear: SMALL Belt----
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+DEXTERITY - 11 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+STRENGTH - 10 - P
+--------------------
+----Gear: Potion----
 Effected Ability - Effect Value - P/N
 CHARISMA - 12 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
 STRENGTH - 7 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+CHARISMA - 2 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+CHARISMA - 2 - N
 --------------------
 ----Gear: SMALL Belt----
 Effected Ability - Effect Value - P/N
-STRENGTH - 8 - P
+STRENGTH - 12 - P
+--------------------
+----Gear: SMALL Belt----
+Effected Ability - Effect Value - P/N
+STRENGTH - 6 - N
+DEXTERITY - 12 - N
+--------------------
+----Gear: MEDIUM Belt----
+Effected Ability - Effect Value - P/N
+DEXTERITY - 9 - P
+CONSTITUITION - 12 - P
+--------------------
+----Gear: MEDIUM Belt----
+Effected Ability - Effect Value - P/N
+STRENGTH - 6 - P
 CONSTITUITION - 10 - P
 --------------------
 ----Gear: MEDIUM Belt----
 Effected Ability - Effect Value - P/N
-STRENGTH - 9 - P
-DEXTERITY - 6 - P
---------------------
-----Gear: MEDIUM Belt----
-Effected Ability - Effect Value - P/N
-DEXTERITY - 12 - N
-CONSTITUITION - 5 - N
---------------------
-----Gear: MEDIUM Belt----
-Effected Ability - Effect Value - P/N
-CHARISMA - 6 - P
+CHARISMA - 9 - P
+STRENGTH - 11 - P
 --------------------
 ----Gear: Footwear----
 Effected Ability - Effect Value - P/N
-DEXTERITY - 8 - N
+DEXTERITY - 7 - P
 --------------------
 
 ***Player is Using This Weapon***
@@ -116,43 +116,19 @@ Player :
 Player #1-Tobby
 ***Player Abilities With Gears Affects***
 Ability - Value
-CHARISMA - 46
-DEXTERITY - 55
-CONSTITUITION - 42
-STRENGTH - 33
+CHARISMA - 38
+DEXTERITY - 65
+CONSTITUITION - 48
+STRENGTH - 48
 
 ***Player is Wearing These Gears***
 ----Gear: HeadGear----
 Effected Ability - Effect Value - P/N
-CONSTITUITION - 5 - P
+CONSTITUITION - 8 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-CONSTITUITION - 11 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CONSTITUITION - 11 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CHARISMA - 6 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-DEXTERITY - 6 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-DEXTERITY - 10 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-DEXTERITY - 6 - P
---------------------
-----Gear: Potion----
-Effected Ability - Effect Value - P/N
-CHARISMA - 12 - P
+CONSTITUITION - 8 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
@@ -160,35 +136,61 @@ STRENGTH - 5 - P
 --------------------
 ----Gear: Potion----
 Effected Ability - Effect Value - P/N
-CONSTITUITION - 9 - N
+STRENGTH - 4 - P
 --------------------
-----Gear: MEDIUM Belt----
+----Gear: Potion----
 Effected Ability - Effect Value - P/N
+DEXTERITY - 10 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+CHARISMA - 6 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+STRENGTH - 11 - P
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+CONSTITUITION - 4 - N
+--------------------
+----Gear: Potion----
+Effected Ability - Effect Value - P/N
+CHARISMA - 8 - N
+--------------------
+----Gear: SMALL Belt----
+Effected Ability - Effect Value - P/N
+CHARISMA - 5 - N
 DEXTERITY - 3 - N
-CONSTITUITION - 9 - N
 --------------------
 ----Gear: MEDIUM Belt----
-Effected Ability - Effect Value - P/N
-DEXTERITY - 8 - P
-CONSTITUITION - 7 - P
---------------------
-----Gear: MEDIUM Belt----
-Effected Ability - Effect Value - P/N
-CHARISMA - 11 - P
-CONSTITUITION - 11 - P
---------------------
-----Gear: LARGE Belt----
 Effected Ability - Effect Value - P/N
 STRENGTH - 11 - P
 DEXTERITY - 7 - P
 --------------------
-----Gear: LARGE Belt----
+----Gear: MEDIUM Belt----
 Effected Ability - Effect Value - P/N
-CONSTITUITION - 2 - N
+CHARISMA - 6 - P
+DEXTERITY - 12 - P
+--------------------
+----Gear: MEDIUM Belt----
+Effected Ability - Effect Value - P/N
+CHARISMA - 11 - P
+CONSTITUITION - 5 - P
+--------------------
+----Gear: MEDIUM Belt----
+Effected Ability - Effect Value - P/N
+CHARISMA - 11 - P
+CONSTITUITION - 5 - P
+--------------------
+----Gear: MEDIUM Belt----
+Effected Ability - Effect Value - P/N
+DEXTERITY - 11 - P
+CONSTITUITION - 9 - P
 --------------------
 ----Gear: Footwear----
 Effected Ability - Effect Value - P/N
-DEXTERITY - 4 - P
+DEXTERITY - 11 - P
 --------------------
 
 ***Player is Using This Weapon***
@@ -202,7 +204,7 @@ Now we start the game by running in turns:
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
 Result: Success
 Attack Times: 2
-Caused Damage: 41
+Caused Damage: 43
 ----------------
 -----Attack-----
 {Player #1-Tobby} --attacks-> {Player #2-Dianna}
@@ -214,7 +216,7 @@ Caused Damage: 0
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
 Result: Success
 Attack Times: 2
-Caused Damage: 59
+Caused Damage: 61
 ----------------
 
 -------------------
@@ -228,255 +230,27 @@ The game state now is:
 Now we re-start the game by running in turns:
 -----Attack-----
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
+Result: Success
+Attack Times: 2
+Caused Damage: 14
 ----------------
 -----Attack-----
 {Player #1-Tobby} --attacks-> {Player #2-Dianna}
 Result: Success
 Attack Times: 1
-Caused Damage: 1
+Caused Damage: 39
 ----------------
 -----Attack-----
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
 Result: Success
-Attack Times: 1
+Attack Times: 2
 Caused Damage: 2
 ----------------
 -----Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
 {Player #1-Tobby} --attacks-> {Player #2-Dianna}
 Result: Success
 Attack Times: 1
-Caused Damage: 1
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
+Caused Damage: 51
 ----------------
 -----Attack-----
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
@@ -488,19 +262,7 @@ Caused Damage: 0
 {Player #1-Tobby} --attacks-> {Player #2-Dianna}
 Result: Success
 Attack Times: 1
-Caused Damage: 1
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
+Caused Damage: 61
 ----------------
 -----Attack-----
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
@@ -512,7 +274,7 @@ Caused Damage: 0
 {Player #1-Tobby} --attacks-> {Player #2-Dianna}
 Result: Success
 Attack Times: 1
-Caused Damage: 8
+Caused Damage: 80
 ----------------
 -----Attack-----
 {Player #2-Dianna} --attacks-> {Player #1-Tobby}
@@ -524,91 +286,7 @@ Caused Damage: 0
 {Player #1-Tobby} --attacks-> {Player #2-Dianna}
 Result: Success
 Attack Times: 1
-Caused Damage: 16
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 23
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 20
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 22
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 34
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 44
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 50
-----------------
------Attack-----
-{Player #2-Dianna} --attacks-> {Player #1-Tobby}
-Result: Fail
-Attack Times: 0
-Caused Damage: 0
-----------------
------Attack-----
-{Player #1-Tobby} --attacks-> {Player #2-Dianna}
-Result: Success
-Attack Times: 1
-Caused Damage: 67
+Caused Damage: 101
 ----------------
 
 -------------------
