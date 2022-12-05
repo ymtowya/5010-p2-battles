@@ -54,6 +54,7 @@ public class BattleGameDriver {
       log(game.getStateString());
     }
     log("\n-------------------\n");
+    
     log("Now the game result is:\n");
     log(game.getResultString());
     
